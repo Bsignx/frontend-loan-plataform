@@ -1,16 +1,45 @@
 import React from 'react'
 import Head from 'next/head'
 
-import { Container } from './styles'
+import Logo from '../../assets/logo.svg'
+import Background from '../../assets/home-background.svg'
+
+import {
+  Container,
+  HeaderContainer,
+  ButtonsContainer,
+  MainText,
+  Button,
+  LoginIcon,
+  RegisterIcon
+} from './styles'
 
 const Home: React.FC = () => {
   return (
     <Container>
       <Head>
-        <title>Loan.prototype - Plataforma de empréstimos</title>
+        <title>Home - Loan.prototype </title>
       </Head>
 
-      <h1>Olá</h1>
+      <HeaderContainer>
+        <Logo />
+        <Background />
+      </HeaderContainer>
+
+      <MainText>
+        Seja bem-vindo. <strong>O que deseja fazer?</strong>
+      </MainText>
+
+      <ButtonsContainer>
+        <Button>
+          <LoginIcon />
+          <p>Entrar</p>
+        </Button>
+        <Button>
+          <RegisterIcon />
+          <p>Registrar</p>
+        </Button>
+      </ButtonsContainer>
     </Container>
   )
 }
