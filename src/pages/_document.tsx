@@ -44,11 +44,11 @@ export default class MyDocument extends Document {
           <meta charSet="utf-8" />
 
           <link
-            href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
             rel="stylesheet"
           />
 
-          <link rel="icon" href="https://rocketseat.com.br/favicon.ico" />
+          <link rel="icon" href="/" />
         </Head>
         <body>
           <Main />

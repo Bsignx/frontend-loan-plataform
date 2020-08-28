@@ -6,9 +6,17 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+
   body {
-    background: ${props => props.theme.colors.background};
-    color: ${props => props.theme.colors.text};
-    font: 400 16px Roboto, sans-serif;
+    color: ${props => props.theme.colors.normalText};
+    font-family: 'Open sans', sans-serif;
+    font-size: 60%;
   }
+
+  html,
+  body,
+  #root {
+    height: 100vh;
+  }
+
 `

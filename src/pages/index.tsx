@@ -1,16 +1,8 @@
 import React from 'react'
-import Head from 'next/head'
+import Home from './Home'
 
-const Home: React.FC = () => {
-  return (
-    <div>
-      <Head>
-        <title>Loan.prototype - Plataforma de empréstimos</title>
-      </Head>
-
-      <h1>Olá</h1>
-    </div>
-  )
+const Initial: React.FC = () => {
+  return <Home />
 }
 
-export default Home
+export default Initial
