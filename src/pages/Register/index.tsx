@@ -27,8 +27,32 @@ const Login: React.FC = () => {
       </HeaderContainer>
 
       <FormContainer>
-        <h2>Entrar</h2>
+        <h2>Registrar-se</h2>
         <form>
+          <Input
+            name="name"
+            type="text"
+            label="Nome completo"
+            placeholder="Fulano da Silva"
+          />
+          <Input
+            name="birth"
+            type="date"
+            label="Data de nascimento"
+            placeholder="xx/xx/xxxx"
+          />
+          <Input
+            name="cpf"
+            type="text"
+            label="CPF(Apenas números)"
+            placeholder="xxxxxxxxxxx"
+          />
+          <Input
+            name="cell"
+            type="text"
+            label="Celular(Apenas números)"
+            placeholder="xxxxxxxxxxx"
+          />
           <Input
             name="email"
             type="email"
@@ -41,16 +65,20 @@ const Login: React.FC = () => {
             label="Senha"
             placeholder="*************"
           />
-          <AlternativeText>
-            Esqueceu a senha? <Link href="/">Clique aqui</Link>
-          </AlternativeText>
+          <Input
+            name="confirm-password"
+            type="password"
+            label="Repetir senha"
+            placeholder="*************"
+          />
+
           <Link href="/Register">
             <Button>
-              <p>Entrar</p>
+              <p>Cadastrar</p>
             </Button>
           </Link>
           <AlternativeText>
-            Não tem conta? <Link href="/Register">Faça seu cadastro</Link>
+            Já tem cadastro? <Link href="/">Faça o login</Link>
           </AlternativeText>
         </form>
       </FormContainer>

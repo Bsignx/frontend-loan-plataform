@@ -6,7 +6,8 @@ const theme = {
     primary: '#6567C3',
     secondary: '#1CE8A5',
     terciary: '#ACAECC',
-    white: '#ffffff'
+    white: '#ffffff',
+    input: '#EBECF1'
   }
 }
 

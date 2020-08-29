@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 
 import Logo from '../../assets/logo.svg'
 import Background from '../../assets/home-background.svg'
@@ -41,14 +42,19 @@ const Landing: React.FC = () => {
         </MainText>
 
         <ButtonsContainer>
-          <Button href="/login">
-            <LoginIcon />
-            <p>Entrar</p>
-          </Button>
-          <Button className="secondary-button" href="/register">
-            <RegisterIcon />
-            <p>Registrar</p>
-          </Button>
+          <Link href="/Login">
+            <Button>
+              <LoginIcon />
+              <p>Entrar</p>
+            </Button>
+          </Link>
+
+          <Link href="/Register">
+            <Button className="secondary-button">
+              <RegisterIcon />
+              <p>Registrar</p>
+            </Button>
+          </Link>
         </ButtonsContainer>
       </MainContainer>
     </Container>

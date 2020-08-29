@@ -81,18 +81,20 @@ export const ButtonsContainer = styled.div`
   }
 `
 
-export const Button = styled.a`
+export const Button = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 
   width: 10rem;
   height: 4rem;
   border-radius: 0.4rem;
+  text-decoration: none;
   background-color: ${props => props.theme.colors.primary};
   color: ${props => props.theme.colors.white};
 
-  & + a {
+  & + div {
     margin-left: 0.8rem;
   }
 
