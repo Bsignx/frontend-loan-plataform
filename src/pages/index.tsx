@@ -1,8 +1,8 @@
 import React from 'react'
-import Home from './Home'
+import Landing from './Landing'
 
 const Initial: React.FC = () => {
-  return <Home />
+  return <Landing />
 }
 
 export default Initial
