@@ -102,6 +102,7 @@ export const Button = styled.div`
   height: 3rem;
   border-radius: 0.4rem;
   text-decoration: none;
+  cursor: pointer;
   background-color: ${props => props.theme.colors.primary};
   color: ${props => props.theme.colors.white};
 

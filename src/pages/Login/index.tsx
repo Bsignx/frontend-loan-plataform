@@ -42,15 +42,21 @@ const Login: React.FC = () => {
             placeholder="*************"
           />
           <AlternativeText>
-            Esqueceu a senha? <Link href="/">Clique aqui</Link>
+            Esqueceu a senha?{' '}
+            <Link href="/">
+              <a>Clique aqui</a>
+            </Link>
           </AlternativeText>
-          <Link href="/Register">
+          <Link href="/Home">
             <Button>
               <p>Entrar</p>
             </Button>
           </Link>
           <AlternativeText>
-            Não tem conta? <Link href="/Register">Faça seu cadastro</Link>
+            Não tem conta?{' '}
+            <Link href="/Register">
+              <a>Faça seu cadastro</a>
+            </Link>
           </AlternativeText>
         </form>
       </FormContainer>

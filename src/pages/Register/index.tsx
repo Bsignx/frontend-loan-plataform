@@ -72,13 +72,16 @@ const Login: React.FC = () => {
             placeholder="*************"
           />
 
-          <Link href="/Register">
+          <Link href="/Login">
             <Button>
               <p>Cadastrar</p>
             </Button>
           </Link>
           <AlternativeText>
-            Já tem cadastro? <Link href="/">Faça o login</Link>
+            Já tem cadastro?{' '}
+            <Link href="/Login">
+              <a>Faça o login</a>
+            </Link>
           </AlternativeText>
         </form>
       </FormContainer>

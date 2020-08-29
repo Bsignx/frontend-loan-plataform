@@ -100,6 +100,7 @@ export const AlternativeText = styled.p`
 export const Button = styled.div`
   width: 100%;
   height: 3rem;
+  cursor: pointer;
   margin-top: 0.8rem;
   border-radius: 0.4rem;
   text-decoration: none;
