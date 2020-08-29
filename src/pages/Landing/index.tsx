@@ -41,11 +41,11 @@ const Landing: React.FC = () => {
         </MainText>
 
         <ButtonsContainer>
-          <Button>
+          <Button href="/login">
             <LoginIcon />
             <p>Entrar</p>
           </Button>
-          <Button className="secondary-button">
+          <Button className="secondary-button" href="/register">
             <RegisterIcon />
             <p>Registrar</p>
           </Button>
