@@ -14,7 +14,8 @@ import {
   RateIcon,
   Button,
   FeaturesContainer,
-  DualContainer
+  DualContainer,
+  DescribeText
 } from './styles'
 import Link from 'next/link'
 
@@ -25,7 +26,8 @@ interface CardLoanProps {
   maximum: string
   deadline: Array<number>
   rate: number
-  description: string
+  description?: string
+  loan?: boolean
 }
 
 const CardLoan: React.FC<CardLoanProps> = ({
@@ -35,7 +37,8 @@ const CardLoan: React.FC<CardLoanProps> = ({
   maximum,
   deadline,
   rate,
-  description
+  description,
+  loan
 }) => {
   return (
     <Container>
@@ -45,6 +48,7 @@ const CardLoan: React.FC<CardLoanProps> = ({
 
       <InfoContainer>
         <MainText>{name}</MainText>
+        {description && <DescribeText>{description}</DescribeText>}
         <FeaturesContainer>
           <DualContainer>
             <DetailContainer>
@@ -82,11 +86,20 @@ const CardLoan: React.FC<CardLoanProps> = ({
           </DualContainer>
         </FeaturesContainer>
 
-        <Link href="/card-detail">
-          <Button>
-            <p>Ver esta opção</p>
-          </Button>
-        </Link>
+        {loan ? (
+          <Link href="/home">
+            <Button>
+              <p>Aplicar</p>{' '}
+            </Button>
+          </Link>
+        ) : (
+          <Link href="/loan">
+            <Button>
+              {' '}
+              <p>Ver esta opção</p>
+            </Button>
+          </Link>
+        )}
       </InfoContainer>
     </Container>
   )

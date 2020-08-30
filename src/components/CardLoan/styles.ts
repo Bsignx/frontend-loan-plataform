@@ -71,6 +71,12 @@ export const MainText = styled.p`
   }
 `
 
+export const DescribeText = styled.p`
+  font-size: 0.7rem;
+  margin-bottom: 0.4rem;
+  max-width: 26rem;
+`
+
 export const DetailContainer = styled.div`
   display: flex;
   flex-direction: column;

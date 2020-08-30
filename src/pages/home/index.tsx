@@ -39,7 +39,6 @@ const Home: React.FC = () => {
           maximum="50.000.00"
           deadline={[6, 18]}
           rate={3.4}
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed gravida elit euismod. Sodales gravida pellentesque nunc, porttitor sit a. Ac nulla et, lectus sit sit. Nibh scelerisque morbi sagittis suscipit aliquet lacus."
         />
         <CardLoan
           name="Empréstimo pessoal exemplo"
@@ -48,7 +47,6 @@ const Home: React.FC = () => {
           maximum="50.000.00"
           deadline={[6, 18]}
           rate={3.4}
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed gravida elit euismod. Sodales gravida pellentesque nunc, porttitor sit a. Ac nulla et, lectus sit sit. Nibh scelerisque morbi sagittis suscipit aliquet lacus."
         />
         <CardLoan
           name="Empréstimo pessoal exemplo"
@@ -57,7 +55,6 @@ const Home: React.FC = () => {
           maximum="50.000.00"
           deadline={[6, 18]}
           rate={3.4}
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sed gravida elit euismod. Sodales gravida pellentesque nunc, porttitor sit a. Ac nulla et, lectus sit sit. Nibh scelerisque morbi sagittis suscipit aliquet lacus."
         />
       </CardsContainer>
     </Container>
