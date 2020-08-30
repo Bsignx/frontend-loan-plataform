@@ -1,6 +1,7 @@
 import React from 'react'
 import Input from '../../components/Input'
 import Logo from '../../assets/logo.svg'
+import Link from 'next/link'
 
 import {
   Container,
@@ -11,7 +12,6 @@ import {
   AlternativeText,
   Button
 } from './styles'
-import Link from 'next/link'
 
 const Login: React.FC = () => {
   return (
@@ -27,32 +27,8 @@ const Login: React.FC = () => {
       </HeaderContainer>
 
       <FormContainer>
-        <h2>Registrar-se</h2>
+        <h2>Entrar</h2>
         <form>
-          <Input
-            name="name"
-            type="text"
-            label="Nome completo"
-            placeholder="Fulano da Silva"
-          />
-          <Input
-            name="birth"
-            type="date"
-            label="Data de nascimento"
-            placeholder="xx/xx/xxxx"
-          />
-          <Input
-            name="cpf"
-            type="text"
-            label="CPF(Apenas números)"
-            placeholder="xxxxxxxxxxx"
-          />
-          <Input
-            name="cell"
-            type="text"
-            label="Celular(Apenas números)"
-            placeholder="xxxxxxxxxxx"
-          />
           <Input
             name="email"
             type="email"
@@ -65,22 +41,21 @@ const Login: React.FC = () => {
             label="Senha"
             placeholder="*************"
           />
-          <Input
-            name="confirm-password"
-            type="password"
-            label="Repetir senha"
-            placeholder="*************"
-          />
-
-          <Link href="/Login">
+          <AlternativeText>
+            Esqueceu a senha?{' '}
+            <Link href="/">
+              <a>Clique aqui</a>
+            </Link>
+          </AlternativeText>
+          <Link href="/home">
             <Button>
-              <p>Cadastrar</p>
+              <p>Entrar</p>
             </Button>
           </Link>
           <AlternativeText>
-            Já tem cadastro?{' '}
-            <Link href="/Login">
-              <a>Faça o login</a>
+            Não tem conta?{' '}
+            <Link href="/register">
+              <a>Faça seu cadastro</a>
             </Link>
           </AlternativeText>
         </form>

@@ -43,19 +43,19 @@ const RightNav: React.Fc<RightNavProps> = ({ open }) => {
   return (
     <Container open={open}>
       <ContainerLinks>
-        <Link href="/">
+        <Link href="/home">
           <a>
             <HomeIcon />
             <p>Empréstimos</p>
           </a>
         </Link>
-        <Link href="/">
+        <Link href="/manage-loans">
           <a>
             <WalletIcon />
             <p> Gerenciar Propostas</p>
           </a>
         </Link>
-        <Link href="/">
+        <Link href="/profile">
           <a>
             <PersonIcon />
             <p>Meu Perfil</p>

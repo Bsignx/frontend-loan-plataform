@@ -32,6 +32,10 @@ export const Container = styled.div`
       }
     }
   }
+
+  @media (max-width: 768px) {
+    padding: 0 2.4rem;
+  }
 `
 
 export const ProfileContainer = styled.div`
