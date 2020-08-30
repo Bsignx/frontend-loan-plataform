@@ -13,7 +13,7 @@ export const FilterOrderContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0.8rem 1.6rem;
-
+  max-width: 40rem;
   > a {
     display: flex;
     align-items: center;
@@ -23,6 +23,10 @@ export const FilterOrderContainer = styled.div`
       font-weight: 600;
     }
   }
+`
+
+export const CardsContainer = styled.div`
+  padding: 0.8rem 1.6rem;
 `
 
 export const FilterIcon = styled(Filter)`

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const SelectElement = styled.select`
+  outline: none;
   height: 3rem;
   width: 8rem;
   border: none;
