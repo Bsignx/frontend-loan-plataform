@@ -1,52 +1,78 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
-import RightNav from './RightNav'
+import {
+  ContainerLinks,
+  HomeIcon,
+  WalletIcon,
+  PersonIcon,
+  ProfileContainer,
+  LogoutIcon
+} from './styles'
+import Link from 'next/link'
 
-const StyledBurger = styled.div`
-  width: 2rem;
-  height: 2rem;
-  position: fixed;
-  top: 15px;
-  right: 20px;
-  z-index: 20;
-  display: none;
+const Container = styled.div<RightNavProps>`
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.6rem 0 15%;
+
   @media (max-width: 768px) {
-    display: flex;
-    justify-content: space-around;
-    flex-flow: column nowrap;
-  }
-  div {
-    width: 2rem;
-    height: 0.25rem;
-    background-color: ${({ open }) => (open ? '#ccc' : '#333')};
-    border-radius: 10px;
-    transform-origin: 1px;
-    transition: all 0.3s linear;
-    &:nth-child(1) {
-      transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
-    }
-    &:nth-child(2) {
-      transform: ${({ open }) => (open ? 'translateX(100%)' : 'translateX(0)')};
-      opacity: ${({ open }) => (open ? 0 : 1)};
-    }
-    &:nth-child(3) {
-      transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
-    }
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    background-color: ${props => props.theme.colors.primary};
+    position: fixed;
+    transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 280px;
+
+    padding: 4rem 2.4rem 0 2.4rem;
+    transition: transform 0.3s ease-in-out;
   }
 `
 
-const Burger = () => {
-  const [open, setOpen] = useState(false)
+export interface RightNavProps {
+  open?: boolean
+}
 
+const RightNav: React.Fc<RightNavProps> = ({ open }) => {
   return (
-    <>
-      <StyledBurger open={open} onClick={() => setOpen(!open)}>
-        <div />
-        <div />
-        <div />
-      </StyledBurger>
-      <RightNav open={open} />
-    </>
+    <Container open={open}>
+      <ContainerLinks>
+        <Link href="/">
+          <a>
+            <HomeIcon />
+            <p>Empréstimos</p>
+          </a>
+        </Link>
+        <Link href="/">
+          <a>
+            <WalletIcon />
+            <p> Gerenciar Propostas</p>
+          </a>
+        </Link>
+        <Link href="/">
+          <a>
+            <PersonIcon />
+            <p>Meu Perfil</p>
+          </a>
+        </Link>
+      </ContainerLinks>
+
+      <ProfileContainer>
+        <Link href="/">
+          <a>
+            <LogoutIcon />
+            <p>Sair</p>
+          </a>
+        </Link>
+      </ProfileContainer>
+    </Container>
   )
 }
-export default Burger
+
+export default RightNav

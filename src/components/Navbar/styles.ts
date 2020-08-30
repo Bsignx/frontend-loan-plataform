@@ -17,6 +17,7 @@ export const Container = styled.div`
 
   > svg {
     width: 10rem;
+    flex-shrink: 0;
   }
 
   a {
@@ -34,6 +35,9 @@ export const Container = styled.div`
 `
 
 export const ProfileContainer = styled.div`
+  display: flex;
+  align-items: center;
+
   svg {
     margin-right: 0.4rem;
   }
@@ -41,6 +45,12 @@ export const ProfileContainer = styled.div`
   > a {
     display: flex;
     align-items: center;
+  }
+  @media (max-width: 768px) {
+    align-items: flex-start;
+    > a {
+      margin: 0.8rem;
+    }
   }
 `
 
@@ -56,6 +66,11 @@ export const ContainerLinks = styled.div`
     margin: 0.8rem;
     display: flex;
     align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
   }
 `
 
