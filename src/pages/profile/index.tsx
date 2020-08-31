@@ -12,7 +12,7 @@ import {
   ProfileImage,
   ImageContainer,
   ResponsiveContainer
-} from './styles'
+} from '../../styles/pages/profile'
 
 const Profile: React.FC = () => {
   return (

@@ -10,7 +10,7 @@ import {
   FilterOrderContainer,
   FilterIcon,
   CardsContainer
-} from './styles'
+} from '../../styles/pages/home'
 
 const Home: React.FC = () => {
   return (

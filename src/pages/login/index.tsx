@@ -11,7 +11,7 @@ import {
   FormContainer,
   AlternativeText,
   Button
-} from './styles'
+} from '../../styles/pages/login'
 
 const Login: React.FC = () => {
   return (

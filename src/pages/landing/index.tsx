@@ -15,7 +15,7 @@ import {
   RegisterIcon,
   CallText,
   MainContainer
-} from './styles'
+} from '../../styles/pages/landing'
 
 const Landing: React.FC = () => {
   return (

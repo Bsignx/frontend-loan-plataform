@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../../components/Navbar'
 import CardLoan from '../../components/CardLoan'
+import Link from 'next/link'
 
 import loanImage from '../../assets/loanImage.png'
 
@@ -9,8 +10,7 @@ import {
   FilterOrderContainer,
   BackIcon,
   CardsContainer
-} from './styles'
-import Link from 'next/link'
+} from '../../styles/pages/loan'
 
 const Loan: React.FC = () => {
   return (

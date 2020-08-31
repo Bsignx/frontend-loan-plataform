@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../../components/Navbar'
 import Select from '../../components/Select'
-import CardLoan from '../../components/CardLoan'
+import ManageCardLoan from '../../components/ManageCardLoan'
 
 import loanImage from '../../assets/loanImage.png'
 
@@ -10,8 +10,7 @@ import {
   FilterOrderContainer,
   FilterIcon,
   CardsContainer
-} from './styles'
-import ManageCardLoan from '../../components/ManageCardLoan'
+} from '../../styles/pages/manage'
 
 const Manage: React.FC = () => {
   return (
