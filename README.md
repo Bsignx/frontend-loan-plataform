@@ -9,6 +9,7 @@
 </p>
 
 > :pencil: Frontend project made to TQI selection process.
+Project made mainly with the objective of showing a fluid layout using technologies consolidated in the market.
 
 
 <div align="center">
