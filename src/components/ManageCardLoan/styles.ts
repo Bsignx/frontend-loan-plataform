@@ -14,7 +14,7 @@ export const Container = styled.div`
   margin-bottom: 1rem;
   display: flex;
   padding: 0.8rem 0.4rem;
-  max-width: 19rem;
+
   @media (min-width: 720px) {
     max-width: 40rem;
   }

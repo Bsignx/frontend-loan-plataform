@@ -55,7 +55,7 @@ export const FormContainer = styled.div`
   align-items: center;
   max-width: 20rem;
   width: 100%;
-  margin-top: 0.8rem;
+  margin-top: 1.6rem;
   padding: 2.4rem 1.6rem 1.6rem;
   box-shadow: 0px 10px 22px 2px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
@@ -76,6 +76,7 @@ export const FormContainer = styled.div`
     min-width: 30rem;
     padding: 3.2rem 1.6rem;
     top: 10rem;
+    margin-top: 0.8rem;
   }
 `
 
