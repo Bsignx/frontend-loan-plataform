@@ -40,7 +40,7 @@ export interface RightNavProps {
   open?: boolean
 }
 
-const RightNav: React.Fc<RightNavProps> = ({ open }) => {
+const RightNav: React.FC<RightNavProps> = ({ open }) => {
   return (
     <Container open={open}>
       <ContainerLinks>
