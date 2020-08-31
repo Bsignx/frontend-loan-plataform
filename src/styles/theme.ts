@@ -7,7 +7,9 @@ const theme = {
     secondary: '#1CE8A5',
     terciary: '#ACAECC',
     white: '#ffffff',
-    input: '#EBECF1'
+    input: '#EBECF1',
+    danger: '#dd0000',
+    analize: '#f59b42'
   }
 }
 

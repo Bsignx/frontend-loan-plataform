@@ -11,8 +11,9 @@ import {
   FilterIcon,
   CardsContainer
 } from './styles'
+import ManageCardLoan from '../../components/ManageCardLoan'
 
-const Home: React.FC = () => {
+const Manage: React.FC = () => {
   return (
     <Container>
       <Navbar />
@@ -32,23 +33,16 @@ const Home: React.FC = () => {
         </a>
       </FilterOrderContainer>
       <CardsContainer>
-        <CardLoan
+        <ManageCardLoan
           name="Empréstimo pessoal exemplo"
           image={loanImage}
           minimum="1.000.00"
           maximum="50.000.00"
           deadline={[6, 18]}
           rate={3.4}
+          approved
         />
-        <CardLoan
-          name="Empréstimo pessoal exemplo"
-          image={loanImage}
-          minimum="1.000.00"
-          maximum="50.000.00"
-          deadline={[6, 18]}
-          rate={3.4}
-        />
-        <CardLoan
+        <ManageCardLoan
           name="Empréstimo pessoal exemplo"
           image={loanImage}
           minimum="1.000.00"
@@ -61,4 +55,4 @@ const Home: React.FC = () => {
   )
 }
 
-export default Home
+export default Manage

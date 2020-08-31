@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import Input from '../../components/Input'
 import Logo from '../../assets/logo.svg'
 
@@ -11,7 +12,6 @@ import {
   AlternativeText,
   Button
 } from './styles'
-import Link from 'next/link'
 
 const Login: React.FC = () => {
   return (

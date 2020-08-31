@@ -18,8 +18,8 @@ const Select: React.FC<SelectProps> = ({
   ...rest
 }) => {
   return (
-    <SelectElement value="" id={name} {...rest}>
-      <option value="" disabled hidden>
+    <SelectElement id={name} {...rest}>
+      <option disabled hidden>
         {initialName}
       </option>
       {options.map(option => (

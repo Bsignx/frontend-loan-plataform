@@ -14,11 +14,14 @@ import {
   Button,
   FeaturesContainer,
   DualContainer,
-  DescribeText
+  DescribeText,
+  StatusContainer,
+  HourglassIcon,
+  CheckIcon
 } from './styles'
 import Link from 'next/link'
 
-interface CardLoanProps {
+interface ManageCardLoanProps {
   name: string
   image: any
   minimum: string
@@ -26,10 +29,10 @@ interface CardLoanProps {
   deadline: Array<number>
   rate: number
   description?: string
-  loan?: boolean
+  approved?: boolean
 }
 
-const CardLoan: React.FC<CardLoanProps> = ({
+const ManageCardLoan: React.FC<ManageCardLoanProps> = ({
   name,
   image,
   minimum,
@@ -37,7 +40,7 @@ const CardLoan: React.FC<CardLoanProps> = ({
   deadline,
   rate,
   description,
-  loan
+  approved
 }) => {
   return (
     <Container>
@@ -84,24 +87,36 @@ const CardLoan: React.FC<CardLoanProps> = ({
             </DetailContainer>
           </DualContainer>
         </FeaturesContainer>
-
-        {loan ? (
-          <Link href="/home">
-            <Button>
-              <p>Aplicar</p>{' '}
-            </Button>
-          </Link>
-        ) : (
-          <Link href="/loan">
-            <Button>
-              {' '}
-              <p>Ver esta opção</p>
-            </Button>
-          </Link>
-        )}
+        <StatusContainer>
+          {approved ? (
+            <ContainerSub>
+              <CheckIcon />
+              <p>Aprovado</p>
+            </ContainerSub>
+          ) : (
+            <ContainerSub>
+              <HourglassIcon />
+              <p>Em análise</p>
+            </ContainerSub>
+          )}
+          {approved ? (
+            <Link href="/home">
+              <Button disabled>
+                <p>Aprovado</p>{' '}
+              </Button>
+            </Link>
+          ) : (
+            <Link href="/loan">
+              <Button className="analize">
+                {' '}
+                <p>Cancelar</p>
+              </Button>
+            </Link>
+          )}
+        </StatusContainer>
       </InfoContainer>
     </Container>
   )
 }
 
-export default CardLoan
+export default ManageCardLoan

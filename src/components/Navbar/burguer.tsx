@@ -5,7 +5,7 @@ import RightNav, { RightNavProps } from './rightNav'
 const StyledBurger = styled.div<RightNavProps>`
   width: 2rem;
   height: 2rem;
-  position: fixed;
+
   top: 22px;
   right: 20px;
   z-index: 20;

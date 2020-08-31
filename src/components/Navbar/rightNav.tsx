@@ -16,6 +16,7 @@ const Container = styled.div<RightNavProps>`
   justify-content: space-between;
   align-items: center;
   padding: 0 1.6rem 0 15%;
+  z-index: 19;
 
   @media (max-width: 768px) {
     justify-content: flex-start;
@@ -49,7 +50,7 @@ const RightNav: React.Fc<RightNavProps> = ({ open }) => {
             <p>Empréstimos</p>
           </a>
         </Link>
-        <Link href="/manage-loans">
+        <Link href="/manage">
           <a>
             <WalletIcon />
             <p> Gerenciar Propostas</p>
